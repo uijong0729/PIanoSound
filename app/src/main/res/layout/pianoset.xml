@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="피아노 설정"
+        android:layout_margin="20dp"
+        android:textAlignment="center"
+        android:textSize="40sp"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/piano_midi_musica_7044"
+        android:layout_margin="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="4dp">
+
+        <TextView
+            android:layout_weight="5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20dp"
+            android:text="건반배속" />
+
+        <SeekBar
+            android:id="@+id/totalAccel"
+            android:layout_weight="2"
+            android:max="100"
+            android:min="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progress="50"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="4dp">
+
+        <TextView
+            android:layout_weight="5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="건반음량"
+            android:textSize="20dp"/>
+
+        <SeekBar
+            android:id="@+id/totalVolume"
+            android:layout_weight="2"
+            android:max="100"
+            android:min="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progress="100"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="확인"
+            android:textColor="#ffffff"
+            android:id="@+id/piano_settings_confirm"
+            android:background="@drawable/selector"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+
+
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/piano_midi_musica_7044"
+            android:layout_margin="10dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PianoSound"
+            android:textColor="#000000"
+            android:textSize="35dp"
+            android:textAlignment="center"
+            android:textStyle="italic"
+            />
+
+
+        <Button
+            android:id="@+id/bringYourPiano"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:layout_weight="1"
+            android:background="@drawable/selector"
+            android:gravity="center"
+            android:onClick="go"
+            android:text="건반을 가져오세요"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <Button
+            android:id="@+id/bringYourRecorder"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="녹음기를 가져오세요"
+            android:textSize="24sp"
+            android:background="@drawable/selector"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="go"/>
+
+        <Button
+            android:id="@+id/bringBoth"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="녹음기 + 건반을 가져오세요"
+            android:textSize="24sp"
+            android:background="@drawable/selector"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="go"/>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+
+
+</android.support.constraint.ConstraintLayout>

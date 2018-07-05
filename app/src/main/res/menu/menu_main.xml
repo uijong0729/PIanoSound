@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="me.euijonglee.realrealsound.MainActivity">
+
+    <item
+        android:id="@+id/piano_settings"
+        android:orderInCategory="100"
+        android:title="@string/piano_settings"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/recorder_settings"
+        android:orderInCategory="100"
+        android:title="@string/recorder_settings"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/exit_settings"
+        android:orderInCategory="100"
+        android:title="@string/exit_settings"
+        app:showAsAction="never" />
+
+</menu>
