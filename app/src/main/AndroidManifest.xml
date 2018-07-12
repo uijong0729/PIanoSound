@@ -43,6 +43,12 @@
 
         </activity>
 
+        <activity
+            android:name="settingUI.SkinSetting"
+            android:label="SkinSetting">
+
+        </activity>
+
         <service
             android:name="service.RecordTimer"
             android:enabled="true">

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="피아노 설정"
+        android:layout_margin="20dp"
+        android:textAlignment="center"
+        android:textSize="40sp"/>
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ImageButton
+        android:id="@+id/origin1"
+        android:layout_weight="1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/realpiano"
+        android:scaleType="fitXY"
+        android:focusedByDefault="true"
+        android:background="@color/colorPrimaryDark"/>
+
+    <ImageButton
+        android:id="@+id/origin2"
+        android:layout_weight="1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/table4"
+        android:background="@color/colorPrimaryDark"
+        android:scaleType="fitXY"/>
+
+        <ImageButton
+            android:id="@+id/origin3"
+            android:layout_weight="1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/silophone"
+            android:background="@color/colorPrimaryDark"
+            android:scaleType="fitXY"/>
+<!--
+
+        <ImageButton
+            android:id="@+id/addImg"
+            android:layout_weight="1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="@drawable/ripple_effect"
+            android:scaleType="fitXY"/>
+-->
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+<!--
+        <Button
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="외부 이미지 가져오기"
+            android:textColor="#ffffff"
+            android:id="@+id/load_img"
+            android:background="@drawable/selector"/>-->
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="확인"
+            android:textColor="#ffffff"
+            android:id="@+id/skin_confirm"
+            android:background="@drawable/ripple_effect"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

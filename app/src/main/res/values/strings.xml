@@ -3,6 +3,7 @@
     <string name="action_settings">Settings</string>
     <string name="piano_settings">건반 세팅</string>
     <string name="recorder_settings">시스템 세팅</string>
+    <string name="piano_moyang">건반 모양변경</string>
     <string name="exit_settings">종료</string>
 
 </resources>
