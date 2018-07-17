@@ -57,6 +57,19 @@ public class FileManager {
         }
     }
 
+    public static boolean DeleteConfigFile(){
+        File f = new File(directory + "/config.txt");
+        try{
+            f.delete();
+            return true;
+        }
+        catch (Exception e)
+        {
+            System.out.println("파일 삭제 에러");
+            return false;
+        }
+    }
+
     public static void makeTextFile(String directory, String fileName, int value){
         File saveFile = new File(directory + "/" + fileName);
 
