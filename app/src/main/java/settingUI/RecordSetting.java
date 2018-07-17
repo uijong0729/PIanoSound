@@ -4,8 +4,12 @@ import android.app.Activity;
 import android.media.AudioManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.SeekBar;
+import android.widget.Toast;
+
+import java.io.IOException;
 
 import file.FileManager;
 import me.euijonglee.realrealsound.R;
@@ -13,7 +17,7 @@ import me.euijonglee.realrealsound.R;
 public class RecordSetting extends Activity {
 
     private SeekBar sysvol;
-    private Button button, cancle;
+    private Button button, cancle, initialize;
     private int system_volume;
     AudioManager audio;
 
@@ -30,6 +34,7 @@ public class RecordSetting extends Activity {
         audio = (AudioManager) getSystemService(AUDIO_SERVICE);
         button = findViewById(R.id.piano_settings_confirm);
         cancle = findViewById(R.id.recorder_settings_systemVolume);
+        initialize = findViewById(R.id.system_setting_initialize);
 
         system_volume = audio.getStreamVolume(AudioManager.STREAM_MUSIC);
         sysvol = findViewById(R.id.sysvol);
@@ -46,6 +51,20 @@ public class RecordSetting extends Activity {
         cancle.setOnClickListener((view) -> {
 
             finish();
+        });
+
+        initialize.setOnClickListener(v ->{
+            try {
+                FileManager.DeleteConfigFile();
+                Toast.makeText(this, "설정 파일이 삭제되었습니다.", Toast.LENGTH_SHORT).show();
+            }
+            catch (Exception e)
+            {
+                Log.e("삭제실패", e.getMessage());
+            }
+            finally {
+                finish();
+            }
         });
 
 

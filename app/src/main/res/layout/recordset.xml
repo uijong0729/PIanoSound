@@ -68,6 +68,16 @@
             android:background="@drawable/selector"/>
 
         <Button
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="설정 초기화 및 위 설정을 이용하지 않음"
+            android:textColor="#ffffff"
+            android:id="@+id/system_setting_initialize"
+            android:background="@drawable/selector"/>
+
+        <Button
+            android:layout_marginTop="10dp"
             android:id="@+id/recorder_settings_systemVolume"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

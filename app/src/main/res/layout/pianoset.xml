@@ -85,6 +85,7 @@
             android:id="@+id/piano_settings_confirm"
             android:background="@drawable/selector"/>
 
+
         <Button
             android:layout_marginTop="10dp"
             android:id="@+id/piano_settings_reject"
