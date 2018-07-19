@@ -9,9 +9,7 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.Toast;
 
-import java.io.IOException;
-
-import file.FileManager;
+import Utility.FileManager;
 import me.euijonglee.realrealsound.R;
 
 public class RecordSetting extends Activity {
@@ -36,11 +34,14 @@ public class RecordSetting extends Activity {
         cancle = findViewById(R.id.recorder_settings_systemVolume);
         initialize = findViewById(R.id.system_setting_initialize);
 
+        //시스템 볼륨
         system_volume = audio.getStreamVolume(AudioManager.STREAM_MUSIC);
         sysvol = findViewById(R.id.sysvol);
 
+        //시스템음량 프로그래스바에 현재 음량 반영
         sysvol.setProgress(system_volume);
 
+        //확인
         button.setOnClickListener(view -> {
                 //파일 생성
                 FileManager.makeTextFile(FileManager.directory, "config.txt", audio.getStreamVolume(AudioManager.STREAM_MUSIC));
@@ -48,23 +49,16 @@ public class RecordSetting extends Activity {
                 finish();
             });
 
+        //취소
         cancle.setOnClickListener((view) -> {
 
             finish();
         });
 
+        //동기화
         initialize.setOnClickListener(v ->{
-            try {
-                FileManager.DeleteConfigFile();
-                Toast.makeText(this, "설정 파일이 삭제되었습니다.", Toast.LENGTH_SHORT).show();
-            }
-            catch (Exception e)
-            {
-                Log.e("삭제실패", e.getMessage());
-            }
-            finally {
-                finish();
-            }
+                Toast.makeText(this, "현재 음량에 동기화됩니다.", Toast.LENGTH_SHORT).show();
+                sysvol.setProgress(system_volume);
         });
 
 

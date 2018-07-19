@@ -33,16 +33,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20dp"
-            android:text="건반배속" />
+            android:text="건반키" />
 
         <SeekBar
             android:id="@+id/totalAccel"
             android:layout_weight="2"
-            android:max="100"
+            android:max="200"
             android:min="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:progress="50"/>
+            android:progress="100"/>
 
     </LinearLayout>
 
@@ -72,12 +72,34 @@
     </LinearLayout>
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="4dp">
+
+
+        <Switch
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="진동설정"
+            android:track="@drawable/switch_track"
+            android:textSize="20dp"
+            android:switchMinWidth="230dp"
+            android:thumb="@drawable/round_radio_button_checked_black_18dp"
+            android:textOn="ON"
+            android:textOff="OFF"
+            android:id="@+id/vib"
+            />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:layout_height="wrap_content">
 
         <Button
+            android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="확인"
@@ -85,6 +107,14 @@
             android:id="@+id/piano_settings_confirm"
             android:background="@drawable/selector"/>
 
+        <Button
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="설정초기화"
+            android:textColor="#ffffff"
+            android:id="@+id/piano_settings_init"
+            android:background="@drawable/selector"/>
 
         <Button
             android:layout_marginTop="10dp"
