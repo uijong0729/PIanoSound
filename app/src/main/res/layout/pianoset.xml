@@ -105,7 +105,8 @@
             android:text="확인"
             android:textColor="#ffffff"
             android:id="@+id/piano_settings_confirm"
-            android:background="@drawable/selector"/>
+            android:background="@drawable/selector"
+            android:layout_margin="5dp"/>
 
         <Button
             android:layout_weight="1"
@@ -114,7 +115,8 @@
             android:text="설정초기화"
             android:textColor="#ffffff"
             android:id="@+id/piano_settings_init"
-            android:background="@drawable/selector"/>
+            android:background="@drawable/selector"
+            android:layout_margin="5dp"/>
 
         <Button
             android:layout_marginTop="10dp"
@@ -125,7 +127,9 @@
             android:background="@color/colorPrimaryDark"
             android:text="취소"
             android:textColor="@color/colorPrimary"
-            android:textSize="24sp" />
+            android:textSize="24sp"
+            android:layout_margin="5dp"
+            />
 
     </LinearLayout>
 

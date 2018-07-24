@@ -9,11 +9,14 @@
 
 
     <ImageView
+        android:visibility="visible"
+        android:id="@+id/record_icon"
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:layout_margin="10dp"
-        android:src="@drawable/recordericon"/>
+        android:src="@drawable/recordericon"
+        />
 
     <ToggleButton
         android:id="@+id/rbt"
@@ -25,7 +28,8 @@
         android:checked="true"
         android:textOff="녹음종료"
         android:textOn="녹음시작"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:layout_margin="5dp"/>
 
     <Button
         android:id="@+id/playbt"
@@ -35,7 +39,38 @@
         android:background="@drawable/selector"
         android:textColor="@color/colorPrimaryDark"
         android:text="녹음파일 재생"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:layout_margin="5dp"/>
+
+    <LinearLayout
+        android:id="@+id/playbar"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <SeekBar
+            android:id="@+id/play_seekbar"
+            android:layout_weight="10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" />
+
+        <ToggleButton
+            android:id="@+id/play_playOrPause"
+            android:layout_weight="1"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:textOff="||"
+            android:textOn="▶"/>
+        <Button
+            android:id="@+id/play_stop"
+            android:layout_weight="1"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:text="■"/>
+
+    </LinearLayout>
 
     <Button
         android:id="@+id/editbt"
@@ -45,7 +80,8 @@
         android:background="@drawable/selector"
         android:textColor="@color/colorPrimaryDark"
         android:text="녹음파일 삭제"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:layout_margin="5dp"/>
 
     <Button
         android:id="@+id/goback"
@@ -55,7 +91,8 @@
         android:background="@color/colorPrimaryDark"
         android:text="뒤로가기"
         android:textColor="@color/colorPrimary"
-        android:textSize="24sp" />
+        android:textSize="24sp"
+        android:layout_margin="5dp"/>
 
 
 </LinearLayout>
