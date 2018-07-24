@@ -14,6 +14,7 @@ public class FileManager {
     public final static String FILE_PATH = "/sdcard/android/data/realrealsound";
     public static final String directory = "/sdcard/android/data/realrealsoundConfig";
 
+    //파일명 변경
     public static void rename(String oldName, String newName){
         Log.e("파일매니저", oldName + " / " +newName);
         File old = new File(FILE_PATH + "/" +oldName);
@@ -30,6 +31,7 @@ public class FileManager {
         }
     }
 
+    //파일 경로 생성
     public static void fileInit(String filePath){
         File file = new File(filePath);
 
@@ -41,6 +43,7 @@ public class FileManager {
 
     }
 
+    //텍스트파일 생성
     public static void makeTextFile(String directory, String fileName, String value){
         File saveFile = new File(directory + "/" + fileName);
 
