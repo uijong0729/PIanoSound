@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="피아노 설정"
+        android:textStyle="bold"
         android:layout_margin="20dp"
         android:textAlignment="center"
         android:textSize="40sp"/>

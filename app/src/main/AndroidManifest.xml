@@ -2,14 +2,23 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="me.euijonglee.realrealsound">
 
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <meta-data
+        android:name="com.kakao.sdk.AppKey"
+        android:value="@string/kakao_app_key" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/baseline_library_music_black_18dp"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/baseline_library_music_black_18dp"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
@@ -22,58 +31,48 @@
         </activity>
         <activity
             android:name=".Piano"
-            android:label="piano">
-
-        </activity>
+            android:label="piano" />
         <activity
             android:name=".Recorder"
-            android:label="recorder">
-
-        </activity>
-
+            android:label="recorder" />
         <activity
             android:name="settingUI.PianoSetting"
-            android:label="PianoSetting">
-
-        </activity>
-
+            android:label="PianoSetting" />
         <activity
             android:name="settingUI.RecordSetting"
             android:label="RecordSetting">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
 
-                <data android:scheme="@string/kakao_scheme"
-                    android:host="@string/kakaolink_host" />
+                <data
+                    android:host="@string/kakaolink_host"
+                    android:scheme="@string/kakao_scheme" />
             </intent-filter>
-
         </activity>
-
         <activity
             android:name="settingUI.SkinSetting"
-            android:label="SkinSetting">
-
-        </activity>
+            android:label="SkinSetting" />
 
         <service
             android:name="service.RecordTimer"
             android:enabled="true">
             <intent-filter>
-                <action android:name="RecordTimer"/>
+                <action android:name="RecordTimer" />
             </intent-filter>
         </service>
+        <service
+            android:name="service.MusicSheetPlayer"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="MusicSheetPlayer" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".MusicSheet"></activity>
     </application>
-
-    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
-    <uses-permission android:name="android.permission.VIBRATE"/>
-
-    <meta-data
-        android:name="com.kakao.sdk.AppKey"
-        android:value="@string/kakao_app_key" />
 
 </manifest>

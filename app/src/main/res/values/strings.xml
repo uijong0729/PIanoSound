@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">RealRealSound</string>
+    <string name="app_name">Piano Sound</string>
     <string name="action_settings">Settings</string>
     <string name="piano_settings">건반 세팅</string>
     <string name="recorder_settings">시스템 세팅</string>

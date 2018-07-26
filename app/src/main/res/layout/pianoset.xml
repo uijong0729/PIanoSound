@@ -2,17 +2,22 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="10dp">
+    android:padding="10dp"
+    >
 
 
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="피아노 설정"
+        android:text="건반 옵션"
+        android:shadowColor="#444444"
+        android:shadowDx="10.0"
+        android:textStyle="bold"
+        android:shadowDy="8.0"
+        android:shadowRadius="5.0"
         android:layout_margin="20dp"
         android:textAlignment="center"
         android:textSize="40sp"/>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MusicSheet">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <ImageView
+        android:layout_margin="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/musicsheet"/>
+
+    <Button
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/selector"
+        android:textColor="@color/colorPrimaryDark"
+        android:id="@+id/myjsonplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="나의 json파일 재생"/>
+
+        <Button
+            android:background="@drawable/selector"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/otherjsonplay"
+            android:textColor="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="외부 json파일 재생"/>
+
+    <Button
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/selector"
+        android:id="@+id/sharejson"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="json파일 공유"/>
+
+    <Button
+        android:background="@color/colorPrimaryDark"
+        android:id="@+id/jsonback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="뒤로가기"/>
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

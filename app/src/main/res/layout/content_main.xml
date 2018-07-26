@@ -23,16 +23,6 @@
             android:src="@drawable/piano_midi_musica_7044"
             android:layout_margin="10dp"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="PianoSound"
-            android:textColor="#000000"
-            android:textSize="35dp"
-            android:textAlignment="center"
-            android:textStyle="italic"
-            />
-
 
         <Button
             android:id="@+id/bringYourPiano"
@@ -43,6 +33,7 @@
             android:background="@drawable/selector"
             android:gravity="center"
             android:onClick="go"
+            android:textStyle="bold"
             android:text="건반을 가져오세요"
             android:textColor="@color/colorPrimaryDark"
             android:layout_margin="5dp"/>
@@ -54,6 +45,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="녹음기를 가져오세요"
+            android:textStyle="bold"
             android:textSize="24sp"
             android:background="@drawable/selector"
             android:textColor="@color/colorPrimaryDark"
@@ -67,6 +59,21 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:text="녹음기 + 건반을 가져오세요"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:background="@drawable/selector"
+            android:textColor="@color/colorPrimaryDark"
+            android:onClick="go"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/musicSheet"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="악보를 가져오세요"
+            android:textStyle="bold"
             android:textSize="24sp"
             android:background="@drawable/selector"
             android:textColor="@color/colorPrimaryDark"

@@ -10,6 +10,7 @@
         android:textSize="40dp"
         android:gravity="center"
         android:background="#000000"
+        android:textStyle="bold"
         android:textColor="#ffffff"
         android:layout_height="wrap_content"/>
 

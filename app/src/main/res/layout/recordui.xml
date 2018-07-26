@@ -26,6 +26,7 @@
         android:background="@drawable/selector"
         android:textColor="@color/colorPrimaryDark"
         android:checked="true"
+        android:textStyle="bold"
         android:textOff="녹음종료"
         android:textOn="녹음시작"
         android:textSize="24sp"
@@ -39,6 +40,7 @@
         android:background="@drawable/selector"
         android:textColor="@color/colorPrimaryDark"
         android:text="녹음파일 재생"
+        android:textStyle="bold"
         android:textSize="24sp"
         android:layout_margin="5dp"/>
 
@@ -61,6 +63,7 @@
             android:layout_weight="1"
             android:layout_width="30dp"
             android:layout_height="wrap_content"
+            android:textStyle="bold"
             android:textOff="||"
             android:textOn="▶"/>
         <Button
@@ -80,6 +83,7 @@
         android:background="@drawable/selector"
         android:textColor="@color/colorPrimaryDark"
         android:text="녹음파일 공유"
+        android:textStyle="bold"
         android:textSize="24sp"
         android:layout_margin="5dp"/>
 
@@ -91,6 +95,7 @@
         android:background="@drawable/selector"
         android:textColor="@color/colorPrimaryDark"
         android:text="녹음파일 삭제"
+        android:textStyle="bold"
         android:textSize="24sp"
         android:layout_margin="5dp"/>
 
@@ -101,6 +106,7 @@
         android:layout_weight="1"
         android:background="@color/colorPrimaryDark"
         android:text="뒤로가기"
+        android:textStyle="bold"
         android:textColor="@color/colorPrimary"
         android:textSize="24sp"
         android:layout_margin="5dp"/>

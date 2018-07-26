@@ -2,17 +2,24 @@ package Utility;
 
 import android.util.Log;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 
 public class FileManager {
 
     public final static String FILE_PATH = "/sdcard/android/data/realrealsound";
     public static final String directory = "/sdcard/android/data/realrealsoundConfig";
+    public static final String jsonDirectory = "/sdcard/android/data/realrealsoundJson";
+    public static final String downloadDirectory = "/sdcard/KakaoTalkDownload";
 
     //파일명 변경
     public static void rename(String oldName, String newName){
@@ -102,6 +109,29 @@ public class FileManager {
         finally {
             return content;
         }
+    }
+
+    public static ArrayList<Note> convertJsonToArrayList(JSONArray jr){
+
+        ArrayList<Note> ar = new ArrayList();
+
+        try{
+            for(int n = 0 ; n < jr.length() ; n++)
+            {
+                JSONObject jb = jr.getJSONObject(n);
+                //Log.e("note = ", jb.toString());
+                ar.add(new Note(jb.getInt("index"), jb.getLong("milisecond"), jb.getInt("note")));
+
+            }
+
+
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+
+        return ar;
     }
 
 
