@@ -7,21 +7,24 @@ public class Note {
     private int index;
     private Long milisecond;
     private int note;
+    private Long idle;
     private String kr;
 
 
-    public Note(Long milisecond, int note) {
+    public Note(Long milisecond, int note, Long idle) {
         this.milisecond = milisecond;
         this.note = note;
         this.kr = transfer(note);
+        this.idle = idle;
     }
 
 
-    public Note(int index, Long milisecond, int note) {
+    public Note(int index, Long milisecond, int note, Long idle) {
         this.index = index;
         this.milisecond = milisecond;
         this.note = note;
         this.kr = transfer(note);
+        this.idle = idle;
     }
 
     public String transfer(int note){
@@ -49,26 +52,14 @@ public class Note {
     public String getKr() {
         return kr;
     }
-
-    public void setKr(String kr) {
-        this.kr = kr;
-    }
-
     public Long getMilisecond() {
         return milisecond;
     }
-
-    public void setMilisecond(Long milisecond) {
-        this.milisecond = milisecond;
-    }
-
     public int getNote() {
         return note;
     }
+    public Long getIdle(){return idle;}
 
-    public void setNote(int note) {
-        this.note = note;
-    }
 
     @Override
     public String toString() {
@@ -76,6 +67,6 @@ public class Note {
                 ",milisecond=" + milisecond +
                 ", note=" + note +
                 ", kr=" + kr +
-                '}';
+                "idle = "+idle+"}";
     }
 }

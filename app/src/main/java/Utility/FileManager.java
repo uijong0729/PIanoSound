@@ -120,7 +120,7 @@ public class FileManager {
             {
                 JSONObject jb = jr.getJSONObject(n);
                 //Log.e("note = ", jb.toString());
-                ar.add(new Note(jb.getInt("index"), jb.getLong("milisecond"), jb.getInt("note")));
+                ar.add(new Note(jb.getInt("index"), jb.getLong("milisecond"), jb.getInt("note"), jb.getLong("idle")));
 
             }
 

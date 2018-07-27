@@ -12,13 +12,13 @@
         android:orientation="vertical">
 
     <ImageView
-        android:layout_margin="30dp"
+        android:layout_margin="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:src="@drawable/musicsheet"/>
 
     <Button
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/selector"
         android:textColor="@color/colorPrimaryDark"
         android:id="@+id/myjsonplay"
@@ -28,15 +28,24 @@
 
         <Button
             android:background="@drawable/selector"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="10dp"
             android:id="@+id/otherjsonplay"
             android:textColor="@color/colorPrimaryDark"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="외부 json파일 재생"/>
 
+        <Button
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/selector"
+            android:id="@+id/deletejson"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="json파일 삭제"/>
+
     <Button
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/selector"
         android:id="@+id/sharejson"
         android:textColor="@color/colorPrimaryDark"

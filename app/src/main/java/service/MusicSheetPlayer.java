@@ -72,14 +72,28 @@ public class MusicSheetPlayer extends Service {
                 for (int w = 0 ; w < ar.size() ; w++) {
                     Log.e("arlog = " , ar.get(w).toString());
 
+                    //플레이
                     MainActivity.soundPool.play(MainActivity.touchedSound[ar.get(w).getNote()], MainActivity.volume, MainActivity.volume, 0, 0, MainActivity.accel);
+
+                    //대기시간(재생시간)
                     try {
-                        Thread.sleep(ar.get(w).getMilisecond() + (ar.get(w).getMilisecond() / 3));
+                        Thread.sleep(ar.get(w).getMilisecond());
+                        //SystemClock.sleep(ar.get(w).getMilisecond() + (ar.get(w).getMilisecond() / 3));
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                    //SystemClock.sleep(ar.get(w).getMilisecond() + (ar.get(w).getMilisecond() / 3));
+
+
+                    //종료
                     MainActivity.soundPool.autoPause();
+
+                    //idle시간
+                    try {
+                        Thread.sleep(ar.get(w).getIdle());
+
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
 
                 }
 
