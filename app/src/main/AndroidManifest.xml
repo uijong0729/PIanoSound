@@ -36,6 +36,9 @@
             android:name=".Recorder"
             android:label="recorder" />
         <activity
+            android:name="settingUI.MusicSheetSetting"
+            android:label="MusicSheetSetting" />
+        <activity
             android:name="settingUI.PianoSetting"
             android:label="PianoSetting" />
         <activity

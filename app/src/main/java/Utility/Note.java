@@ -44,10 +44,14 @@ public class Note {
             case 13: return "파#";
             case 14: return "솔#";
             case 15: return "라#";
-            default: return "";
+            default: return "empty";
         }
 
     }
+
+
+
+
 
     public String getKr() {
         return kr;
@@ -67,6 +71,6 @@ public class Note {
                 ",milisecond=" + milisecond +
                 ", note=" + note +
                 ", kr=" + kr +
-                "idle = "+idle+"}";
+                ", idle = "+idle+"}";
     }
 }
