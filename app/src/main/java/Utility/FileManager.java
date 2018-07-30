@@ -146,6 +146,7 @@ public class FileManager {
         Long milisecond = 0L;
         Long idle = 0L;
 
+
         for(int i = 0 ; i < strArray.length ; i++)
         {
             int doremi = transferReverse(strArray[i]);
@@ -164,11 +165,7 @@ public class FileManager {
             {
                 if(i == strArray.length-1)
                 {
-                    result.append("{index:" + count++);
-                    result.append(", milisecond:" + milisecond);
-                    result.append(", note:" + doremi);
-                    result.append(", kr: " + strArray[i]);
-                    result.append(", idle: " + idle + "}");
+                    result.append(sbResult(count++, milisecond, doremi, strArray[i], idle));
                     milisecond = 0L;
                     idle = 0L;
                 }
@@ -183,11 +180,8 @@ public class FileManager {
                             default:
                         }
 
-                        result.append("{index:" + count++);
-                        result.append(", milisecond:" + milisecond);
-                        result.append(", note:" + doremi);
-                        result.append(", kr: " + strArray[i]);
-                        result.append(", idle: " + idle + "}, ");
+                        result.append(sbResult(count++, milisecond, doremi, strArray[i], idle));
+                        result.append(",");
                         milisecond = 0L;
                         idle = 0L;
 
@@ -195,11 +189,8 @@ public class FileManager {
                     }
                     else
                     {
-                        result.append("{index:" + count++);
-                        result.append(", milisecond:" + milisecond);
-                        result.append(", note:" + doremi);
-                        result.append(", kr: " + strArray[i]);
-                        result.append(", idle: " + idle + "}, ");
+                        result.append(sbResult(count++, milisecond, doremi, strArray[i], idle));
+                        result.append(",");
                         milisecond = 0L;
                         idle = 0L;
 
@@ -214,9 +205,10 @@ public class FileManager {
 
         result.append("]");
 
-        Log.e("listen result = ", result.toString());
+       // Log.e("listen result = ", result.toString());
         return result.toString();
     }
+
 
     public static int transferReverse(char note){
         int result = 0;
@@ -259,6 +251,14 @@ public class FileManager {
 
     }
 
-
+    private static String sbResult(int count, Long milisecond, int doremi, char kr, Long idle){
+        StringBuffer sb = new StringBuffer();
+        sb.append("{index:" + count);
+        sb.append(", milisecond:" + milisecond);
+        sb.append(", note:" + doremi);
+        sb.append(", kr: " + kr);
+        sb.append(", idle: " + idle + "}");
+        return sb.toString();
+    }
 
 }
