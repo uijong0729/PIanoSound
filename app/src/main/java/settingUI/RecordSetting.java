@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.media.AudioManager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.Toast;

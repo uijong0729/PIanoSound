@@ -20,9 +20,6 @@ public class FileManager {
     public static final String directory = "/sdcard/android/data/realrealsoundConfig";
     public static final String jsonDirectory = "/sdcard/android/data/realrealsoundJson";
     public static final String downloadDirectory = "/sdcard/KakaoTalkDownload";
-    public static final short SUBMIT = 2; //승인
-    public static final short RESERVE = 1; //보류
-    public static final short REJECT = 0; //거절
 
     //파일명 변경
     public static void rename(String oldName, String newName){
@@ -148,7 +145,6 @@ public class FileManager {
         int count = 0;
         Long milisecond = 0L;
         Long idle = 0L;
-        short isSubmit = 0; //거절, 보류, 제출
 
         for(int i = 0 ; i < strArray.length ; i++)
         {
@@ -199,16 +195,13 @@ public class FileManager {
                     }
                     else
                     {
-                        if(i != 0)
-                        {
-                            result.append("{index:" + count++);
-                            result.append(", milisecond:" + milisecond);
-                            result.append(", note:" + doremi);
-                            result.append(", kr: " + strArray[i]);
-                            result.append(", idle: " + idle + "}, ");
-                            milisecond = 0L;
-                            idle = 0L;
-                        }
+                        result.append("{index:" + count++);
+                        result.append(", milisecond:" + milisecond);
+                        result.append(", note:" + doremi);
+                        result.append(", kr: " + strArray[i]);
+                        result.append(", idle: " + idle + "}, ");
+                        milisecond = 0L;
+                        idle = 0L;
 
                     }
 
@@ -216,10 +209,12 @@ public class FileManager {
 
 
             }
+
         }
 
         result.append("]");
 
+        Log.e("listen result = ", result.toString());
         return result.toString();
     }
 

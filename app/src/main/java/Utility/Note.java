@@ -1,7 +1,5 @@
 package Utility;
 
-import java.util.ArrayList;
-
 public class Note {
 
     private int index;
