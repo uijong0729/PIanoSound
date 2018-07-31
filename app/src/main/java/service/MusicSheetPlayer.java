@@ -69,7 +69,7 @@ public class MusicSheetPlayer extends Service {
 
                 //재생
                 for (int w = 0 ; w < ar.size() ; w++) {
-                    Log.e("arlog = " , ar.get(w).toString());
+                    //Log.e("arlog = " , ar.get(w).toString());
 
                     //플레이
                     MainActivity.soundPool.play(MainActivity.touchedSound[ar.get(w).getNote()], MainActivity.volume, MainActivity.volume, 0, 0, MainActivity.accel);
