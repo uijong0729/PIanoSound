@@ -159,6 +159,7 @@ public class SkinSetting extends Activity {
         MainActivity.touchedSound[5] = MainActivity.soundPool.load(this, R.raw.ra, 1);
         MainActivity.touchedSound[6] = MainActivity.soundPool.load(this, R.raw.si, 1);
         MainActivity.touchedSound[7] = MainActivity.soundPool.load(this, R.raw.hdo, 1);
+        MainActivity.touchedSound[8] = MainActivity.soundPool.load(this, R.raw.hre, 1);
     }
 
     private void loadSilophone(){

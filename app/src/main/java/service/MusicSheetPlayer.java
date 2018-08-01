@@ -58,6 +58,7 @@ public class MusicSheetPlayer extends Service {
                     MainActivity.touchedSound[5] = MainActivity.soundPool.load(this, R.raw.ra, 1);
                     MainActivity.touchedSound[6] = MainActivity.soundPool.load(this, R.raw.si, 1);
                     MainActivity.touchedSound[7] = MainActivity.soundPool.load(this, R.raw.hdo, 1);
+                    MainActivity.touchedSound[8] = MainActivity.soundPool.load(this, R.raw.hre, 1);
 
                     //도# 레# 파# 솔# 라# : x값이 ? 이상인 경우 검은건반으로 인식하여 해당 음계의 배열 +10 값을 # 음으로 한다.
                     MainActivity.touchedSound[10] = MainActivity.soundPool.load(this, R.raw.doos, 1);
